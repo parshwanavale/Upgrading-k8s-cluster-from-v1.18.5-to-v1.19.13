@@ -10,7 +10,7 @@ There are essentially two reasons for backing up:
 2. To be able to restore applications (with data).
 
 **How to backup Kubernetes?**
-Two parts here as well :
+
 1. Backup for the Etcd and relevant certificates in order to restore the control plane
 2. Backup for the applications running in the cluster
 
