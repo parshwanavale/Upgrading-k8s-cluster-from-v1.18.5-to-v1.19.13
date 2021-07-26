@@ -1,5 +1,5 @@
 # Upgrading-k8s-cluster-from-v1.18.5-to-v1.19.13
-> There are basically two aspects :-
+** There are basically two aspects ** :-
 + Creating a backup for the existing version of cluster
 + Actual Upgrade of the cluster ( basically upgrading versions of each node)
 ---
@@ -9,12 +9,13 @@ There are essentially two reasons for backing up:
 1. To be able to restore a failed control plane Node.
 2. To be able to restore applications (with data).
 
-**How to backup Kubernetes?
+**How to backup Kubernetes?**
 Two parts here as well :
 1. Backup for the Etcd and relevant certificates in order to restore the control plane
 2. Backup for the applications running in the cluster
 
 **Steps:**
+ 
  First of all we need to copy the certificates which are present in /pki directory (You may not need to apply sudo as we are already loged in to root)
 ```
 # Backup certificates in backup directory
@@ -38,7 +39,7 @@ sudo docker run --rm -v $(pwd)/backup:/backup \
 # Backup kubeadm-config
 sudo cp /etc/kubeadm/kubeadm-config.yaml backup/
 ```
-The final command is optional and only relevant if you use a configuration file for kubeadm.
+### The final command is optional and only relevant if you use a configuration file for kubeadm.
 ---
 ## Now when we want to restore the control plane we follow the exact opposite steps mentioned above
 ```
