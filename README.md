@@ -1,11 +1,11 @@
 # Upgrading-k8s-cluster-from-v1.18.5-to-v1.19.13
-** There are basically two aspects ** :-
+**There are basically two aspects :-**
 + Creating a backup for the existing version of cluster
 + Actual Upgrade of the cluster ( basically upgrading versions of each node)
 ---
 ## 1.Backup part
 **Why backup Kubernetes?**
-There are essentially two reasons for backing up:
+
 1. To be able to restore a failed control plane Node.
 2. To be able to restore applications (with data).
 
