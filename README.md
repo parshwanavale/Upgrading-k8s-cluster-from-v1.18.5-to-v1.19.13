@@ -206,3 +206,8 @@ by running the following command from anywhere kubectl can access the cluster:
 kubectl get nodes
 ```
 And finally the upgrade process is done!!
+
+
+## Referance links
++ https://v1-19.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
++ https://elastisys.com/backup-kubernetes-how-and-why/
